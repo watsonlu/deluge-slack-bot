@@ -124,7 +124,7 @@ slack.on 'message', (message) ->
         url = url[1..-2]
         console.log "Adding torrent with a http link: '"+url+"'"
 
-      deluge.add(url,'~/delugeDownloads/', (error,result) -> 
+      deluge.add(url, (error,result) -> 
         if error
           console.error error
           channel.send "Torrent with link: '"+url+"' could not be added!"
